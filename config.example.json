@@ -1,0 +1,13 @@
+{
+  "token": "",
+  "prefix": "boo!",
+  "webhook": {
+    "id": "",
+    "token": ""
+  },
+  "colors": {
+    "primary": "#FF6403",
+    "success": "#2ECC71",
+    "error": "#E74C3C"
+  }
+}

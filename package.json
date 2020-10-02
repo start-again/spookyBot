@@ -1,0 +1,25 @@
+{
+  "name": "spookybot",
+  "version": "1.0.0",
+  "description": "A spooky Discord bot",
+  "main": "core.js",
+  "repository": "git@github.com:LucasCtrl/spookyBot.git",
+  "author": "LucasCtrl <lucasalt@protonmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.2"
+  },
+  "scripts": {
+    "dev": "nodemon --inspect core.js",
+    "start": "node code.js"
+  }
+}
