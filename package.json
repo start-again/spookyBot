@@ -20,6 +20,6 @@
   },
   "scripts": {
     "dev": "nodemon --inspect core.js",
-    "start": "node code.js"
+    "start": "node core.js"
   }
 }
