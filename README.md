@@ -32,6 +32,15 @@ To react to a word, you need two elements in the translation file: the word and 
 
 You can see that the `emoji` element is an emoji, but you can also use a custom emoji. For that, I strongly advise you to [read this guide](https://discordjs.guide/popular-topics/reactions.html#custom-emojis).
 
+## Testing locally
+There are 3 steps to test the bot locally in a development environment
+Basically, you have to go through 3 steps to get testing with your own dev bot:
+1. Create a bot [here](https://discord.com/developers/applications)
+2. Create a webhook on your own discord server [here](https://docs.gitlab.com/ee/user/project/integrations/discord_notifications.html)
+3. Copy the config.example.json from the project to config.json and fill in the gaps with the information from the bot and the webhook.
+
+Once these steps are setup, simply run `yarn install` and `npm run dev` from the terminal in the root directory of the repo
+
 ## 👤 Author
 
 **LucasAlt**
