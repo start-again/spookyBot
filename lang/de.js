@@ -19,10 +19,6 @@ module.exports = {
       emoji: '🎃',
     },
     {
-      name: 'abend vor allerheiligen',
-      emoji: '🎃',
-    },
-    {
       name: 'vampir',
       emoji: '🧛',
     },
