@@ -1,5 +1,5 @@
 module.exports = {
-  lang: 'en',
+  lang: 'gr',
   words: [
     {
       // Please do not delete this one 🙏
