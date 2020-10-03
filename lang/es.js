@@ -33,6 +33,10 @@ module.exports = {
     {
       name: 'zombie',
       emoji: '🧟',
+    },
+    {
+      name: 'muerte',
+      emoji: '💀',
     }
   ],
 }

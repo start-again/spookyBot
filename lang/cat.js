@@ -1,5 +1,5 @@
 module.exports = {
-  lang: 'en',
+  lang: 'ca', //Catalan
   words: [
     {
       // Please do not delete this one 🙏
@@ -7,11 +7,11 @@ module.exports = {
       emoji: '761602615326146590',
     },
     {
-      name: 'candy',
+      name: 'dolç',
       emoji: '🍬',
     },
     {
-      name: 'ghost',
+      name: 'fantasma',
       emoji: '👻',
     },
     {
@@ -19,11 +19,11 @@ module.exports = {
       emoji: '🎃',
     },
     {
-      name: 'vampire',
+      name: 'vampir',
       emoji: '🧛🏻‍♂️',
     },
     {
-      name: 'witcher',
+      name: 'mag',
       emoji: '🧙',
     },
     {
