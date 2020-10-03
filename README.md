@@ -25,8 +25,8 @@ To react to a word, you need two elements in the translation file: the word and 
 
 ```json
 {
-  name: 'halloween',
-  emoji: '🎃',
+  "name": "halloween",
+  "emoji": "🎃"
 }
 ```
 
