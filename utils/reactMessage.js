@@ -8,10 +8,9 @@ module.exports = async (guildId, message) => {
   const guildData = await getGuild(guildId)
   const translation = await require(`../lang/${guildData.lang}.js`)
   const fullMessage = message.content.toLowerCase()
+  console.log(fullMessage)
 
   translation.words.forEach((w) => {
-    const emoji = w.emoji
-    const phrase = w.word
-    if (fullMessage.contains(phrase)) message.react(emoji)
+    if (fullMessage.contains(w.name)) message.react(w.emoji)
   })
 }
