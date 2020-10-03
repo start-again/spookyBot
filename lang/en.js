@@ -30,5 +30,9 @@ module.exports = {
       name: 'zombie',
       emoji: '🧟',
     },
+    {
+      name: 'web',
+      emoji: '🕸',
+    }
   ],
 }
