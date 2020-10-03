@@ -23,12 +23,16 @@ module.exports = {
       emoji: '🎃',
     },
     {
-      name: 'noche de brujas',
-      emoji: '🎃',
+      name: 'vampiro',
+      emoji: '🧛',
     },
     {
-      name: 'dia de brujas',
-      emoji: '🎃',
+      name: 'mago',
+      emoji: '🧙',
     },
+    {
+      name: 'zombie',
+      emoji: '🧟',
+    }
   ],
 }
