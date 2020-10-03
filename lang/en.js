@@ -18,5 +18,21 @@ module.exports = {
       name: ['halloween', 'pumpkin'],
       emoji: '🎃',
     },
+    {
+      name: 'vampire',
+      emoji: '🧛🏻‍♂️',
+    },
+    {
+      name: 'witcher',
+      emoji: '🧙',
+    },
+    {
+      name: 'zombie',
+      emoji: '🧟',
+    },
+    {
+      name: 'web',
+      emoji: '🕸',
+    }
   ],
 }

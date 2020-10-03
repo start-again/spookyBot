@@ -1,5 +1,5 @@
 module.exports = {
-  lang: 'ca',
+  lang: 'ca', //Catalan
   words: [
     {
       // Please do not delete this one 🙏
@@ -11,13 +11,28 @@ module.exports = {
       emoji: '🍬',
     },
     {
+      name: 'dolç',
+      emoji: '🍬',
+    },
+    {
       name: 'fantasma',
       emoji: '👻',
     },
     {
-      name: ['halloween', 'pumpkin'],
+      name: 'halloween',
       emoji: '🎃',
+    },
+    {
+      name: 'vampir',
+      emoji: '🧛🏻‍♂️',
+    },
+    {
+      name: 'mag',
+      emoji: '🧙',
+    },
+    {
+      name: 'zombie',
+      emoji: '🧟',
     },
   ],
 }
-

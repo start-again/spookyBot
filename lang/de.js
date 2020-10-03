@@ -34,5 +34,9 @@ module.exports = {
       name: 'untote',
       emoji: '🧟',
     },
+    {
+      name: 'netz',
+      emoji: '🕸',
+    }
   ],
 }
