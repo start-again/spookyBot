@@ -6,16 +6,16 @@ module.exports = async (guildId, message) => {
   const words = message.content.toLowerCase().trim().split(/ +/g)
 
   words.forEach((word) => {
-    const wordData = translation.words.find((w) => translationContainsWord(w.name, word))
+    const wordData = translation.words.find((w) => translationNameContainsWord(w.name, word))
     if (wordData != undefined) message.react(wordData.emoji)
   })
 }
 
-const translationContainsWord = (translation, word) => {
+const translationNameContainsWord = (translationName, word) => {
   let containsWord = false
 
-  if (translation instanceof Array) containsWord = translation.includes(word)
-  else containsWord = translation == word
+  if (translationName instanceof Array) containsWord = translationName.includes(word)
+  else containsWord = translationName == word
 
   return containsWord
 }
