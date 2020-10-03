@@ -1,5 +1,5 @@
 module.exports = {
-  lang: 'cat', //Catalan
+  lang: 'ca', //Catalan
   words: [
     {
       // Please do not delete this one 🙏
