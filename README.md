@@ -6,6 +6,10 @@
 [![stars](https://img.shields.io/github/stars/LucasCtrl/spookyBot.svg?style=flat-square&colorA=191b25)](https://github.com/LucasCtrl/spookyBot/stargazers)
 [![forks](https://img.shields.io/github/forks/LucasCtrl/spookyBot.svg?style=flat-square&colorA=191b25)](https://github.com/LucasCtrl/spookyBot/network)
 
+## 🤖 Add the bot on your server
+
+You just need to click on [this link](https://discord.com/oauth2/authorize?client_id=761568927188123669&scope=bot&permissions=1141124160) and validate the form without changing any permission.
+
 ## 👤 Author
 
 **LucasAlt**
@@ -16,9 +20,9 @@
 ## 🤝 Contributing
 
 This project is convenient for people who want to get into open source and contribute to different projects especially during the Hacktoberfest.
-If you want to add your language to the robot, feel free to copy the `./lang/en.js` file, rename it following the [following nomenclature](http://www.mathguide.de/info/tools/languagecode.html).
+If you want to add your language to the bot, feel free to copy the `./lang/en.js` file, rename it following the [following nomenclature](http://www.mathguide.de/info/tools/languagecode.html).
 
-Then, all you have to do is modify the file, open a pull request and wait for me to approve it and update the robot.
+Then, all you have to do is modify the file, open a pull request and wait for me to approve it and update the bot.
 
 *Don't hesitate to ask me for help on my [Discord server](https://discord.gg/nEDcagb), I would help you with great pleasure!*
 

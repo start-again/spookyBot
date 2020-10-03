@@ -11,8 +11,9 @@ module.exports = {
     command: 'setlang',
     name: 'Set bot language',
     description: 'Change the default bot language',
-    usage: `${prefix}setlang <en|fr>`,
-    displayHelp: false,
+    usage: `${prefix}setlang <lang>`,
+    displayHelp: true,
+    permissionNeeded: 'ADMINISTRATOR',
   },
 
   run: async (bot, message, args) => {
