@@ -13,4 +13,12 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 8,
   },
+  overrides: [
+    {
+      files: ['lang/*.js'],
+      rules: {
+        'require-jsdoc': 'off',
+      },
+    },
+  ],
 }

@@ -1,5 +1,5 @@
 module.exports = {
-  lang: 'en',
+  lang: 'es',
   words: [
     {
       // Please do not delete this one 🙏
@@ -7,11 +7,15 @@ module.exports = {
       emoji: '761602615326146590',
     },
     {
-      name: 'candy',
+      name: 'dulce',
       emoji: '🍬',
     },
     {
-      name: 'ghost',
+      name: 'caramelo',
+      emoji: '🍬',
+    },
+    {
+      name: 'fantasma',
       emoji: '👻',
     },
     {
@@ -19,15 +23,11 @@ module.exports = {
       emoji: '🎃',
     },
     {
-      name: 'all hallows eve',
-      emoji: '🎃',
+      name: 'vampiro',
+      emoji: '🧛',
     },
     {
-      name: 'vampire',
-      emoji: '🧛🏻‍♂️',
-    },
-    {
-      name: 'witcher',
+      name: 'mago',
       emoji: '🧙',
     },
     {
@@ -35,8 +35,8 @@ module.exports = {
       emoji: '🧟',
     },
     {
-      name: 'web',
-      emoji: '🕸',
-    }
+      name: 'muerte',
+      emoji: '💀',
+    },
   ],
 }
