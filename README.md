@@ -12,7 +12,7 @@ This project is convenient for people who want to get into open source and contr
 
 ## 🤖 Add the bot on your server
 
-You just need to click on [this link](https://discord.com/oauth2/authorize?client_id=761568927188123669&scope=bot&permissions=1141124160) and validate the form without changing any permission.
+You just need to click on [this link](https://discord.com/oauth2/authorize?client_id=761568927188123669&scope=bot&permissions=1141140544) and validate the form without changing any permission.
 
 ## 🌐 Adding a language
 
@@ -34,12 +34,17 @@ You can see that the `emoji` element is an emoji, but you can also use a custom 
 
 ## 💻 Testing locally
 1. Create a bot [on the Discord developer portal](https://discord.com/developers/applications),
-2. Create a webhook on your own discord server [by folloing this tutorial](https://docs.gitlab.com/ee/user/project/integrations/discord_notifications.html),
-3. Copy the `config.example.json` from the project to `config.json` and fill in the gaps with the information from the bot and the webhook. The first token is on the bot page accessed from the side of the Discord Developer Portal, and the webook information is found on the page when you navigate to the webhook url,
-4. Invite your dev bot to your server by [following this url](https://discord.com/oauth2/authorize?client_id=761568927188123669&scope=bot&permissions=1141124160), replacing the client id with your bot's client id (found on it's general information page), and the permissions with the Permission Integer created in the Developer Portal as you select permissions for your bot,
+2. Create a webhook on your own discord server [by following this tutorial](https://docs.gitlab.com/ee/user/project/integrations/discord_notifications.html),
+3. Create a Reddit app [at for Reddit Authorized Applications](https://www.reddit.com/prefs/apps) and use the following settings:
+    * type: web-app
+    * redirect uri: `http://localhost:65010/authorize_callback`
+    * free choice for other fields
+4. Use the [reddit-oauth-helper](https://github.com/not-an-aardvark/reddit-oauth-helper) to generate a permanent token
+3. Copy the `config.example.json` from the project to `config.json` and fill in the gaps with the information from the bot, the webhook, the reddit app and authorization. The first token is on the bot page accessed from the side of the Discord Developer Portal, and the webook information is found on the page when you navigate to the webhook url,
+4. Invite your dev bot to your server by [following this url](https://discord.com/oauth2/authorize?client_id=761568927188123669&scope=bot&permissions=1141140544), replacing the client id with your bot's client id (found on it's general information page), and the permissions with the Permission Integer created in the Developer Portal as you select permissions for your bot,
 5. Once these steps are setup, simply run `yarn install` and `npm run dev` from the terminal in the root directory of the repo,
-6. Test the bot is connected by running `<your-prefix>help` to get a list of commands, and then initialize the DB by running `<your-prefix>emitgc`. It should then respond with "Join <your-server> with <#> users,
-7. Test that the bot reacts to comments by typing one of the words in `lang/<your-lang>.js`. The bot should respond with an emoji!
+6. Test if the bot connected by running `<your-prefix>help` to get a list of commands, and then initialize the DB by running `<your-prefix>emitgc`. It should then respond with "Join <your-server> with <#> users,
+7. Test if the bot reacts to comments by typing one of the words in `lang/<your-lang>.js`. The bot should respond with an emoji!
 
 ## 👤 Author
 
