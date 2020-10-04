@@ -13,7 +13,7 @@ Based on the emoji uniqueName it should also be possible to search for it on the
   words: [
     {
       // Please do not delete this one 🙏
-      name: 'spooky'
+      name: 'spooky',
       uniqueName: '_custom_spooky',
       emoji: '761602615326146590',
     },
@@ -259,6 +259,11 @@ Based on the emoji uniqueName it should also be possible to search for it on the
     },
     {
       name: 'halloween'
+      uniqueName: 'Jack-O-Lantern',
+      emoji: '🎃',
+    },
+    {
+      name: 'all hallows eve',
       uniqueName: 'Jack-O-Lantern',
       emoji: '🎃',
     },
