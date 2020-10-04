@@ -48,6 +48,14 @@ You can see that the `emoji` element is an emoji, but you can also use a custom 
 * Twitter: [@LucasCtrlAlt](https://twitter.com/LucasCtrlAlt)
 * GitHub: [@LucasCtrl](https://github.com/LucasCtrl)
 
+## 🙏 Thanks
+* [**@ALMerrill**](https://github.com/ALMerrill) - Translation (es, de), code, documentation
+* [**@marc2332**](https://github.com/marc2332) - Translation (es, ca)
+* [**@tmetten**](https://github.com/tmetten) - Translation (nl)
+* [**@dragonDScript**](https://github.com/dragonDScript) - Translation (ca)
+* [**@Pervolarakis**](https://github.com/Pervolarakis) - Translation (gr)
+* [And many more!](https://github.com/LucasCtrl/spookyBot/graphs/contributors)
+
 ## 🤝 Contributing
 
 Before contributing to this project, make sure you have read the [contribution guidelines](https://github.com/LucasCtrl/spookyBot/blob/main/CONTRIBUTING.md)!
