@@ -1,12 +1,15 @@
 const { getGuild } = require('../models/servers')
 
+String.prototype.contains = function(toCheck) {
+  return this.indexOf(toCheck) >= 0;
+}
+
 module.exports = async (guildId, message) => {
   const guildData = await getGuild(guildId)
   const translation = await require(`../lang/${guildData.lang}.js`)
-  const words = message.content.toLowerCase().trim().split(/ +/g)
+  const fullMessage = message.content.toLowerCase()
 
-  words.forEach((word) => {
-    const wordData = translation.words.find((w) => w.name == word)
-    if (wordData != undefined) message.react(wordData.emoji)
+  translation.words.forEach((w) => {
+    if (fullMessage.contains(w.name)) message.react(w.emoji)
   })
 }
