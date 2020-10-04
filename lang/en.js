@@ -15,7 +15,7 @@ module.exports = {
       emoji: '👻',
     },
     {
-      name: 'halloween',
+      name: ['halloween', 'pumpkin'],
       emoji: '🎃',
     },
     {
