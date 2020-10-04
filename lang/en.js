@@ -9,7 +9,7 @@ Based on the emoji uniqueName it should also be possible to search for it on the
 2. The list "emojiTemplateUniqueNameMappings" of emojis below (including their uniqueNames) was mostly taken from https://emojipedia.org/halloween/ and enhanced a bit with more emojis mentioned at the website, so using the uniqueName you should be able to find the emoji and background information on it (e.g. in which Unicode version was it introduced or what should the emoji mean).\
 \
 3. If you do not see some of the emojis this might be due to your used font as emojis are introduced in newer version of Unicode and not all fonts support the latest Unicode version.',
-  lang: ['en',
+  lang: 'en',
   words: [
     {
       // Please do not delete this one 🙏
