@@ -18,247 +18,247 @@ Based on the emoji uniqueName it should also be possible to search for it on the
       emoji: '761602615326146590',
     },
     {
-      name: 'alien'
+      name: 'alien',
       uniqueName: 'Alien',
       emoji: '👽',
     },
     {
-      name: 'alienmonster'
+      name: 'alienmonster',
       uniqueName: 'Alien Monster',
       emoji: '👾',
     },
     {
-      name: 'heart'
+      name: 'heart',
       uniqueName: 'Anatomical Heart',
       emoji: '🫀',
     },
     {
-      name: 'angry devil'
+      name: 'angry devil',
       uniqueName: 'Angry Face with Horns',
       emoji: '👿',
     },
     {
-      name: 'anxious'
+      name: 'anxious',
       uniqueName: 'Anxious Face with Sweat',
       emoji: '😰',
     },
     {
-      name: 'axe'
+      name: 'axe',
       uniqueName: 'Axe',
       emoji: '🪓',
     },
     {
-      name: 'bat'
+      name: 'bat',
       uniqueName: 'Bat',
       emoji: '🦇',
     },
     {
-      name: 'beating heart'
+      name: 'beating heart',
       uniqueName: 'Beating Heart',
       emoji: '💓',
     },
     {
-      name: 'black heart'
+      name: 'black heart',
       uniqueName: 'Black Heart',
       emoji: '🖤',
     },
     {
-      name: 'black cat'
+      name: 'black cat',
       uniqueName: 'Black Cat',
       emoji: '🐈‍⬛',
     },
     {
-      name: 'blood'
+      name: 'blood',
       uniqueName: 'Blood',
-      emoji: '🦴',
-    },
-    {
-      name: 'bone'
-      uniqueName: 'Bone',
       emoji: '🩸',
     },
     {
-      name: 'brain'
-      uniqueName: 'Brain',
-      emoji: '🧠',
-    },
-    {
-      name: 'broom'
-      uniqueName: 'Broom',
-      emoji: '🧹',
-    },
-    {
-      name: 'candle'
-      uniqueName: 'Candle',
-      emoji: '🕯',
-    },
-    {
-      name: 'candy'
-      uniqueName: 'Candy',
-      emoji: '🍬',
-    },
-    {
-      name: 'chains'
-      uniqueName: 'Chains',
-      emoji: '⛓',
-    },
-    {
-      name: 'chocolate bar'
-      uniqueName: 'Chocolate Bar',
-      emoji: '🍫',
-    },
-    {
-      name: 'cloud with lightning'
-      uniqueName: 'Cloud with Lightning',
-      emoji: '🌩',
-    },
-    {
-      name: 'clown'
-      uniqueName: 'Clown Face',
-      emoji: '🤡',
-    },
-    {
-      name: 'coffin'
-      uniqueName: 'Coffin',
-      emoji: '⚰',
-    },
-    {
-      name: 'crystral ball'
-      uniqueName: 'Crystal Ball',
-      emoji: '🔮',
-    },
-    {
-      name: 'dagger'
-      uniqueName: 'Dagger',
-      emoji: '🗡',
-    },
-    {
-      name: 'disguised'
-      uniqueName: 'Disguised Face',
-      emoji: '🥸',
-    },
-    {
-      name: 'drop of blood'
+      name: 'drop of blood',
       uniqueName: 'Drop of Blood',
       emoji: '🩸',
     },
     {
-      name: 'abandoned house'
+      name: 'bone',
+      uniqueName: 'Bone',
+      emoji: '🦴',
+    },
+    {
+      name: 'brain',
+      uniqueName: 'Brain',
+      emoji: '🧠',
+    },
+    {
+      name: 'broom',
+      uniqueName: 'Broom',
+      emoji: '🧹',
+    },
+    {
+      name: 'candle',
+      uniqueName: 'Candle',
+      emoji: '🕯',
+    },
+    {
+      name: 'candy',
+      uniqueName: 'Candy',
+      emoji: '🍬',
+    },
+    {
+      name: 'chains',
+      uniqueName: 'Chains',
+      emoji: '⛓',
+    },
+    {
+      name: 'chocolate bar',
+      uniqueName: 'Chocolate Bar',
+      emoji: '🍫',
+    },
+    {
+      name: 'cloud with lightning',
+      uniqueName: 'Cloud with Lightning',
+      emoji: '🌩',
+    },
+    {
+      name: 'clown',
+      uniqueName: 'Clown Face',
+      emoji: '🤡',
+    },
+    {
+      name: 'coffin',
+      uniqueName: 'Coffin',
+      emoji: '⚰',
+    },
+    {
+      name: 'crystral ball',
+      uniqueName: 'Crystal Ball',
+      emoji: '🔮',
+    },
+    {
+      name: 'dagger',
+      uniqueName: 'Dagger',
+      emoji: '🗡',
+    },
+    {
+      name: 'disguised',
+      uniqueName: 'Disguised Face',
+      emoji: '🥸',
+    },
+    {
+      name: 'abandoned house',
       uniqueName: 'Derelict House',
       emoji: '🏚',
     },
     {
-      name: 'ear'
+      name: 'ear',
       uniqueName: 'Ear',
       emoji: '👂',
     },
     {
-      name: 'eye'
+      name: 'eye',
       uniqueName: 'Eye',
       emoji: '👁️',
     },
     {
-      name: 'eyes'
+      name: 'eyes',
       uniqueName: 'Eyes',
       emoji: '👀',
     },
     {
-      name: 'investigate'
+      name: 'investigate',
       uniqueName: 'Detective',
       emoji: '🕵',
     },
     {
-      name: 'elf'
+      name: 'elf',
       uniqueName: 'Elf',
       emoji: '🧝',
     },
     {
-      name: 'scream'
+      name: 'scream',
       uniqueName: 'Face Screaming in Fear',
       emoji: '😱',
     },
     {
-      name: 'mummy'
+      name: 'mummy',
       uniqueName: 'Face with Head-Bandage',
       emoji: '🤕',
     },
     {
-      name: 'fairy'
+      name: 'fairy',
       uniqueName: 'Fairy',
       emoji: '🧚',
     },
     {
-      name: 'fear'
+      name: 'fear',
       uniqueName: 'Fearful Face',
       emoji: '😨',
     },
     {
-      name: 'fire'
+      name: 'fire',
       uniqueName: 'Fire',
       emoji: '🔥',
     },
     {
-      name: 'flying saucer'
+      name: 'flying saucer',
       uniqueName: 'Flying Saucer',
       emoji: '🛸',
     },
     {
-      name: 'fog'
+      name: 'fog',
       uniqueName: 'Fog',
       emoji: '🌫️',
     },
     {
-      name: 'foot'
+      name: 'foot',
       uniqueName: 'Foot',
       emoji: '🦶',
     },
     {
-      name: 'footprints'
+      name: 'footprints',
       uniqueName: 'Footprints',
       emoji: '👣',
     },
     {
-      name: 'full moon'
+      name: 'full moon',
       uniqueName: 'Full Moon',
       emoji: '🌕',
     },
     {
-      name: 'funeral urn'
+      name: 'funeral urn',
       uniqueName: 'Funeral Urn',
       emoji: '⚱',
     },
     {
-      name: 'genie'
+      name: 'genie',
       uniqueName: 'Genie',
       emoji: '🧞',
     },
     {
-      name: 'goblin'
+      name: 'goblin',
       uniqueName: 'Goblin',
       emoji: '👺',
     },
     {
-      name: 'ghost'
+      name: 'ghost',
       uniqueName: 'Ghost',
       emoji: '👻',
     },
     {
-      name: 'greenheart'
+      name: 'greenheart',
       uniqueName: 'Green Heart',
       emoji: '💚',
     },
     {
-      name: 'headstone'
+      name: 'headstone',
       uniqueName: 'Headstone',
       emoji: '🪦',
     },
     {
-      name: 'high voltage'
+      name: 'high voltage',
       uniqueName: 'High Voltage',
       emoji: '⚡',
     },
     {
-      name: 'halloween'
+      name: 'halloween',
       uniqueName: 'Jack-O-Lantern',
       emoji: '🎃',
     },
@@ -268,152 +268,152 @@ Based on the emoji uniqueName it should also be possible to search for it on the
       emoji: '🎃',
     },
     {
-      name: 'leg'
+      name: 'leg',
       uniqueName: 'Leg',
       emoji: '🦵',
     },
     {
-      name: 'lollipop'
+      name: 'lollipop',
       uniqueName: 'Lollipop',
       emoji: '🍭',
     },
     {
-      name: 'witcher'
+      name: 'witcher',
       uniqueName: 'Mage',
       emoji: '🧙',
     },
     {
-      name: 'mermaid'
+      name: 'mermaid',
       uniqueName: 'Mermaid',
       emoji: '🧜‍♀️',
     },
     {
-      name: 'merman'
+      name: 'merman',
       uniqueName: 'Merman',
       emoji: '🧜‍♂️',
     },
     {
-      name: 'merperson'
+      name: 'merperson',
       uniqueName: 'Merperson',
       emoji: '🧜',
     },
     {
-      name: 'new moon face'
+      name: 'new moon face',
       uniqueName: 'New Moon Face',
       emoji: '🌚',
     },
     {
-      name: 'night with stars'
+      name: 'night with stars',
       uniqueName: 'Night with Stars',
       emoji: '🌃',
     },
     {
-      name: 'ogre'
+      name: 'ogre',
       uniqueName: 'Ogre',
       emoji: '👹',
     },
     {
-      name: 'orangeheart'
+      name: 'orangeheart',
       uniqueName: 'Orange Heart',
       emoji: '🧡',
     },
     {
-      name: 'owl'
+      name: 'owl',
       uniqueName: 'Owl',
       emoji: '🦉',
     },
     {
-      name: 'disguises'
+      name: 'disguises',
       uniqueName: 'Performing Arts',
       emoji: '🥸',
     },
     {
-      name: 'person in suit levitating'
+      name: 'person in suit levitating',
       uniqueName: 'Person In Suit Levitating',
       emoji: '🕴',
     },
     {
-      name: 'princess'
+      name: 'princess',
       uniqueName: 'Princess',
       emoji: '👸',
     },
     {
-      name: 'robot'
+      name: 'robot',
       uniqueName: 'Robot',
       emoji: '🤖',
     },
     {
-      name: 'skull'
+      name: 'skull',
       uniqueName: 'Skull',
       emoji: '💀',
     },
     {
-      name: 'crossbones'
+      name: 'crossbones',
       uniqueName: 'Skull and Crossbones',
       emoji: '☠',
     },
     {
-      name: 'smiling devil'
+      name: 'smiling devil',
       uniqueName: 'Smiling Face with Horns',
       emoji: '😈',
     },
     {
-      name: 'spider'
+      name: 'spider',
       uniqueName: 'Spider',
       emoji: '🕷',
     },
     {
-      name: 'web'
+      name: 'web',
       uniqueName: 'Spider Web',
       emoji: '🕸',
     },
     {
-      name: 'tongue'
+      name: 'tongue',
       uniqueName: 'Tongue',
       emoji: '👅',
     },
     {
-      name: 'unicorn'
+      name: 'unicorn',
       uniqueName: 'Unicorn',
       emoji: '🦄',
     },
     {
-      name: 'vampire'
+      name: 'vampire',
       uniqueName: 'Vampire',
       emoji: '🧛',
     },
     {
-      name: 'wilted flower'
+      name: 'wilted flower',
       uniqueName: 'Wilted Flower',
       emoji: '🥀',
     },
     {
-      name: 'female elf'
+      name: 'female elf',
       uniqueName: 'Woman Elf',
       emoji: '🧝‍♀️',
     },
     {
-      name: 'female genie'
+      name: 'female genie',
       uniqueName: 'Woman Genie',
       emoji: '🧞‍♀️',
     },
     {
-      name: 'witch'
+      name: 'witch',
       uniqueName: 'Woman Mage',
       emoji: '🧙‍♀️',
     },
     {
-      name: 'female vampire'
+      name: 'female vampire',
       uniqueName: 'Woman Vampire',
       emoji: '🧛‍♀️',
     },
     {
-      name: 'female zombie'
+      name: 'female zombie',
       uniqueName: 'Woman Zombie',
       emoji: '🧟‍♀️',
     },
     {
-      name: 'zombie'
+      name: 'zombie',
       uniqueName: 'Zombie',
       emoji: '🧟',
     }
