@@ -416,7 +416,7 @@ Based on the emoji uniqueName it should also be possible to search for it on the
       name: 'zombie'
       uniqueName: 'Zombie',
       emoji: '🧟',
-    },
+    }
   ],
 }
 
