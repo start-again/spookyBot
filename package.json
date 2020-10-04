@@ -7,6 +7,7 @@
   "author": "LucasCtrl <lucasalt@protonmail.com>",
   "license": "MIT",
   "private": true,
+  "types": "./spooky.d.ts",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
     "discord.js": "^12.3.1",
