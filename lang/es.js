@@ -7,36 +7,36 @@ module.exports = {
       emoji: '761602615326146590',
     },
     {
-      name: 'dulce',
+      name: ['dulce', 'caramelo', 'golosina'],
       emoji: '🍬',
     },
     {
-      name: 'caramelo',
-      emoji: '🍬',
-    },
-    {
-      name: 'fantasma',
+      name: ['fantasma', 'espíritu'],
       emoji: '👻',
     },
     {
-      name: 'halloween',
+      name: ['halloween', 'calabaza'],
       emoji: '🎃',
     },
     {
-      name: 'vampiro',
+      name: ['vampiro', 'dracula'],
       emoji: '🧛',
     },
     {
-      name: 'mago',
+      name: ['mago', 'hechicero', 'brujo'],
       emoji: '🧙',
     },
     {
-      name: 'zombie',
+      name: ['zombie', 'muerto'],
       emoji: '🧟',
     },
     {
-      name: 'muerte',
+      name: ['muerte', 'esqueleto', 'cráneo gris'],
       emoji: '💀',
+    },
+    {
+      name: ['telaraña', 'tela de araña'],
+      emoji: '🕸',
     },
   ],
 }
