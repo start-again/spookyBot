@@ -21,3 +21,7 @@ jspm_packages/
 
 # config file
 config.json
+
+# IDE
+.idea
+*.iml
