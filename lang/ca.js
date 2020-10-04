@@ -7,11 +7,7 @@ module.exports = {
       emoji: '761602615326146590',
     },
     {
-      name: 'caramel',
-      emoji: '🍬',
-    },
-    {
-      name: 'dolç',
+      name: ['caramel', 'dolç'],
       emoji: '🍬',
     },
     {

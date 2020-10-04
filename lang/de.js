@@ -27,16 +27,12 @@ module.exports = {
       emoji: '🧙',
     },
     {
-      name: 'zombie',
-      emoji: '🧟',
-    },
-    {
-      name: 'untote',
+      name: ['zombie', 'untote'],
       emoji: '🧟',
     },
     {
       name: 'netz',
       emoji: '🕸',
-    }
+    },
   ],
 }
