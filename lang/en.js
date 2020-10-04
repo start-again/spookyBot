@@ -33,6 +33,12 @@ module.exports = {
     {
       name: 'web',
       emoji: '🕸',
-    },
+    }
   ],
+  mentions: [
+    {
+      name: 'test',
+      emoji: '👻'
+    }
+  ]
 }
