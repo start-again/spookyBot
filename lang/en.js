@@ -1,5 +1,5 @@
 module.exports = {
-  comment: ['Additional information: \
+  comment: 'Additional information: \
 DISCLAIMER: The current version is just adding new emojis, words in English and a uniqueName field which is explained in the following text BUT later this file should be replaced with a template file that only contains the mapping of the emojis and uniqueName and for other languagese subfolders exist containing the mapping from unitqueName of the emoji to "words/expressions" that trigger the emoji.\
 1. The overall idea behind this file is to provide a common mapping for an emoji to an unique name which can be then mapped to certain words, e.g. for "Happy Halloween!" you would like to see the "Jack-O-Lantern" emoji, but when typing "I really carved an awesome Jack-O-Lantern!" this is also the case. To achieve this mapping between the unique uniqueName of the emoji to certain words ("Halloween", "Jack-O-Lantern", "Pumpkin", "halloween", "pumpkin") the language specific files are used.\
 So people who want to add a language do not have to search for all the emojis again and based on e.g. the English mapping can add their translation.\
