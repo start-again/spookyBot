@@ -32,7 +32,7 @@ module.exports = {
           .setTitle(`${story.title} (${partIndex + 1}/${parts.length})`)
           .setDescription(storyPart)
           .setFooter(`Author: ${story.author.name}`)
-        message.channel.send(embed)
+        message.author.send(embed)
       })
     }
   },
