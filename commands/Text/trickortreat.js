@@ -47,7 +47,7 @@ module.exports = {
         )
       }
     } else {
-      message.reply(
+      message.author.send(
         `It looks like you have already played today. You now have ${trickOrTreat.treats} :candy: and ${trickOrTreat.tricks} :smiling_imp:. There will be more candy up for grabs  tomorrow!`
       )
     }
