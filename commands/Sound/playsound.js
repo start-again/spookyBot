@@ -12,7 +12,7 @@ module.exports = {
     displayHelp: false,
   },
 
-  run: async (bot, message, args) => {
+  run: async (bot, message, args, callback) => {
     if (message.member.voice.channel) {
       let soundPath = __dirname + `/../../sounds/`
       const connection = await message.member.voice.channel.join()
@@ -25,6 +25,7 @@ module.exports = {
 
       dispatcher.on('finish', () => {
         connection.voice.channel.leave()
+        callback()
       })
     } else {
       message.reply('How can I scare your companions without you beeing present in the voice channel?')
