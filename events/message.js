@@ -6,22 +6,19 @@ const reactMessage = require('../utils/reactMessage')
 cmdQueue = []
 handlingCommand = false
 
-var done = function() {
-    handlingCommand = false
-}
-
 var waitToRunCommand = function() {
-  if (handlingCommand) {
-    setTimeout(waitToRunCommand, 300) 
-  } else {
-    setTimeout(runCommand, 300) 
-  }
+  setTimeout(runCommand, 300) 
 }
 
 var runCommand = function() {
   handlingCommand = true
   const cmdFunc = cmdQueue.shift()
   cmdFunc.cmd.run(cmdFunc.bot, cmdFunc.message, cmdFunc.args, done)
+}
+
+var done = function() {
+    handlingCommand = false
+    if (cmdQueue.length > 0) waitToRunCommand()
 }
 
 module.exports = async (bot, webhook, message) => {
@@ -61,7 +58,9 @@ module.exports = async (bot, webhook, message) => {
     }
     // ----- Push to queue and wait for other jobs to finish -----
     cmdQueue.push({cmd: cmd, bot: bot, message: message, args: args})
-    waitToRunCommand()
+    if (!handlingCommand) {
+      waitToRunCommand()
+    }
   } else {
     // -------------------- Reaction system --------------------
     reactMessage(message.guild.id, message)
