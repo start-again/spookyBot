@@ -27,11 +27,12 @@ Based on the emoji uniqueName it should also be possible to search for it on the
       uniqueName: 'Alien Monster',
       emoji: '👾',
     },
-    {
-      name: ['heart'],
-      uniqueName: 'Anatomical Heart',
-      emoji: '🫀',
-    },
+// Coming with Unicode/Emoji 13.0 this year, e.g. with Android 11
+//    {
+//      name: ['heart'],
+//      uniqueName: 'Anatomical Heart',
+//      emoji: '🫀',
+//    },
     {
       name: ['angry devil'],
       uniqueName: 'Angry Face with Horns',
@@ -137,11 +138,12 @@ Based on the emoji uniqueName it should also be possible to search for it on the
       uniqueName: 'Dagger',
       emoji: '🗡',
     },
-    {
-      name: ['disguised'],
-      uniqueName: 'Disguised Face',
-      emoji: '🥸',
-    },
+// Coming with Unicode/Emoji 13.0 this year, e.g. with Android 11
+//    {
+//      name: ['disguised'],
+//      uniqueName: 'Disguised Face',
+//      emoji: '🥸',
+//    },
     {
       name: ['abandoned house'],
       uniqueName: 'Derelict House',
@@ -247,11 +249,12 @@ Based on the emoji uniqueName it should also be possible to search for it on the
       uniqueName: 'Green Heart',
       emoji: '💚',
     },
-    {
-      name: ['headstone'],
-      uniqueName: 'Headstone',
-      emoji: '🪦',
-    },
+// Coming with Unicode/Emoji 13.0 this year, e.g. with Android 11
+//    {
+//      name: ['headstone'],
+//      uniqueName: 'Headstone',
+//      emoji: '🪦',
+//    },
     {
       name: ['high voltage'],
       uniqueName: 'High Voltage',
@@ -320,7 +323,7 @@ Based on the emoji uniqueName it should also be possible to search for it on the
     {
       name: ['disguises'],
       uniqueName: 'Performing Arts',
-      emoji: '🥸',
+      emoji: '🎭',
     },
     {
       name: ['person in suit levitating'],
