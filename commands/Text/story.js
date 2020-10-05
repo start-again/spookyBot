@@ -2,6 +2,8 @@ const snoowrap = require('snoowrap')
 const { MessageEmbed } = require('discord.js')
 const { prefix, reddit } = require('../../config.json')
 
+let antiSpam = {}
+
 module.exports = {
   config: {
     name: 'Scary story',
@@ -25,6 +27,7 @@ module.exports = {
 
       const stories = await retriever.getSubreddit('scarystories').getHot()
       const story = stories[[Math.floor(Math.random() * stories.length)]]
+      const isSpamProtected = antiSpam[message.channel.id] && new Date() - antiSpam[message.channel.id] < 2 * 60000
 
       story.selftext.match(/(.|[\r\n]){1,2048}/g).forEach((storyPart, partIndex, parts) => {
         let embed = new MessageEmbed()
@@ -32,8 +35,17 @@ module.exports = {
           .setTitle(`${story.title} (${partIndex + 1}/${parts.length})`)
           .setDescription(storyPart)
           .setFooter(`Author: ${story.author.name}`)
-        message.author.send(embed)
+
+        isSpamProtected ? message.author.send(embed) : message.channel.send(embed)
       })
+
+      if (isSpamProtected) {
+        message.author.send(
+          ':warning: Due to spam protection I sent you this story as a DM. I only write stories in channels every 2 minutes.'
+        )
+      } else {
+        antiSpam[message.channel.id] = new Date()
+      }
     }
   },
 }
