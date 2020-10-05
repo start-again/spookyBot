@@ -37,7 +37,7 @@ module.exports = {
   ],
   mentions: [
     {
-      name: 'test',
+      name: 'spooky',
       emoji: '👻'
     }
   ]
