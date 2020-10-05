@@ -32,6 +32,7 @@ module.exports = async (bot, webhook, message) => {
     // Our standard argument/command name definition.
     const args = message.content.slice(prefix.length).trim().split(/ +/g)
     const command = args.shift().toLowerCase()
+
     // Grab the command data from the client Collection
     const cmd = bot.commands.get(command) || bot.commands.get(bot.aliases.get(command))
 
@@ -47,6 +48,7 @@ module.exports = async (bot, webhook, message) => {
     webhook.send(privateEmbed)
 
     // -------------------- Command execution --------------------
+
     message.delete()
     if (!message.member.hasPermission(cmd.config.permissionNeeded)) {
       message.reply('Only your server administrator can do this!').then((m) => {
