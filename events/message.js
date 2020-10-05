@@ -3,6 +3,15 @@ const { prefix, colors } = require('../config.json')
 
 const reactMessage = require('../utils/reactMessage')
 
+var wrapFunction = function(fn, context, params) {
+    return function() {
+        fn.apply(context, params);
+    };
+}
+
+cmdQueue = []
+handlingCommand = false
+
 module.exports = async (bot, webhook, message) => {
   if (message.author.bot) return // Ignore all bots
   if (message.author.id === bot.user.id) return // Ignore bot itself
@@ -14,7 +23,6 @@ module.exports = async (bot, webhook, message) => {
     // Our standard argument/command name definition.
     const args = message.content.slice(prefix.length).trim().split(/ +/g)
     const command = args.shift().toLowerCase()
-
     // Grab the command data from the client Collection
     const cmd = bot.commands.get(command) || bot.commands.get(bot.aliases.get(command))
 
@@ -30,7 +38,6 @@ module.exports = async (bot, webhook, message) => {
     webhook.send(privateEmbed)
 
     // -------------------- Command execution --------------------
-
     message.delete()
     if (!message.member.hasPermission(cmd.config.permissionNeeded)) {
       message.reply('Only your server administrator can do this!').then((m) => {
@@ -40,10 +47,24 @@ module.exports = async (bot, webhook, message) => {
       })
       return
     }
-    cmd.run(bot, message, args) // Run the command
+    // ----- Push to queue and wait for other jobs to finish -----
+    cmdQueue.push({cmd: cmd, bot: bot, message: message, args: args})
+    console.log(handlingCommand)
+    console.log(cmdQueue.length)
+    // while (handlingCommand) {
+    //   setTimeout(() => {}, 2000);
+    // }
+    handlingCommand = true
+    console.log('running commands')
+    if (cmdQueue.length > 0) {
+      const cmdFunc = cmdQueue.shift()
+      cmdFunc.cmd.run(cmdFunc.bot, cmdFunc.message, cmdFunc.args)
+      console.log('after command')
+    }
+
+    // handlingCommand = false
   } else {
     // -------------------- Reaction system --------------------
-    // console.log(reactMessage)
     reactMessage(message.guild.id, message)
   }
 }
