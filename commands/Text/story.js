@@ -13,23 +13,27 @@ module.exports = {
   },
 
   run: async (bot, message, args) => {
-    const retriever = new snoowrap({
-      userAgent: reddit.clientId,
-      clientId: reddit.clientId,
-      clientSecret: reddit.clientSecret,
-      refreshToken: reddit.refreshToken,
-    })
+    if (!reddit || !reddit.userAgent || !reddit.clientId || !reddit.clientSecret || !reddit.refreshToken) {
+      message.author.send("I can't tell you a story, no Reddit config provided.")
+    } else {
+      const retriever = new snoowrap({
+        userAgent: reddit.userAgent,
+        clientId: reddit.clientId,
+        clientSecret: reddit.clientSecret,
+        refreshToken: reddit.refreshToken,
+      })
 
-    const stories = await retriever.getSubreddit('scarystories').getHot()
-    const story = stories[[Math.floor(Math.random() * stories.length)]]
+      const stories = await retriever.getSubreddit('scarystories').getHot()
+      const story = stories[[Math.floor(Math.random() * stories.length)]]
 
-    story.selftext.match(/(.|[\r\n]){1,2048}/g).forEach((storyPart, partIndex, parts) => {
-      let embed = new MessageEmbed()
-        .setColor('881EE4')
-        .setTitle(`${story.title} (${partIndex + 1}/${parts.length})`)
-        .setDescription(storyPart)
-        .setFooter(`Author: ${story.author.name}`)
-      message.channel.send(embed)
-    })
+      story.selftext.match(/(.|[\r\n]){1,2048}/g).forEach((storyPart, partIndex, parts) => {
+        let embed = new MessageEmbed()
+          .setColor('881EE4')
+          .setTitle(`${story.title} (${partIndex + 1}/${parts.length})`)
+          .setDescription(storyPart)
+          .setFooter(`Author: ${story.author.name}`)
+        message.channel.send(embed)
+      })
+    }
   },
 }
