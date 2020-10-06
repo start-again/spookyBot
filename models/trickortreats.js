@@ -23,14 +23,14 @@ exports.trick = (userId) => {
 
   trickOrTreat.assign({ tricks: trickOrTreat.value().tricks++, lastPlayed: new Date() }).write()
 
-  return this.geTrickOrTreat(userId)
+  return this.getTrickOrTreat(userId)
 }
 
 // Treat a user
 exports.treat = (userId) => {
   const trickOrTreat = db.get('trickortreats').find({ userId: userId })
 
-  trickOrTreat.assign({ tricks: trickOrTreat.value().treats++, lastPlayed: new Date() }).write()
+  trickOrTreat.assign({ treats: trickOrTreat.value().treats++, lastPlayed: new Date() }).write()
 
   return this.getTrickOrTreat(userId)
 }
