@@ -1,8 +1,9 @@
-const axios = require('axios').default
-const { prefix } = require('../../config.json')
+const snoowrap = require('snoowrap')
+const redditHelper = require('../../utils/redditHelper.js')
+const { prefix, reddit } = require('../../config.json')
+const { isPicture } = require('../../utils/redditHelper.js')
 
-const SUBREDDIT_JSON_URL = 'https://reddit.com/r/spooktober/.json?count=30' // URL of the json containing last subreddit posts
-const POST_HINT_IMG = 'image' // image post hint
+const SUBREDDIT_NAME = 'spooktober'
 
 module.exports = {
   config: {
@@ -14,28 +15,25 @@ module.exports = {
   },
 
   run: async (bot, message, args) => {
-    const res = await axios.get(SUBREDDIT_JSON_URL)
-    if (res.status != 200 || !res.data) {
-      message.reply('Something failed.')
+    if (!redditHelper.configIsValid(reddit)) {
+      message.reply(':ghost: No reddit config found. Please check the README.md to provide one.')
       return
     }
 
-    const resData = res.data.data
-    if (!resData) {
-      message.reply('Nothing spooky has been found')
-      return
-    }
+    const retriever = new snoowrap({
+      userAgent: reddit.userAgent,
+      clientId: reddit.clientId,
+      clientSecret: reddit.clientSecret,
+      refreshToken: reddit.refreshToken,
+    })
 
-    // filter keeping image posts (as we can't do it via the API)
-    const posts = resData.children.map((x) => x.data).filter((x) => x.post_hint === POST_HINT_IMG)
-    if (!posts) {
-      message.reply('No spooky image has been found')
-      return
-    }
+    const submissions = await retriever.getSubreddit(SUBREDDIT_NAME).getHot()
+    const imageSubmissions = submissions.filter((x) => !x.over_18 && !x.spoiler && redditHelper.isPicture(x))
+    const randomIdx = Math.floor(Math.random() * imageSubmissions.length)
+    const randSubmission = imageSubmissions[randomIdx]
 
-    // selecting a random post
-    const randomIdx = Math.floor(Math.random() * posts.length)
-    const imageUrl = posts[randomIdx].url
-    message.channel.send(imageUrl)
+    console.log(imageSubmissions)
+    if (randSubmission) message.channel.send(randSubmission.url)
+    else message.channel.send(':ghost: No spooky meme found')
   },
 }
