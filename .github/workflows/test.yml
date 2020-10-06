@@ -1,0 +1,22 @@
+name: Deployment Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Tag'
+jobs:
+  deploy_prod_bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: appleboy/ssh-action@master
+        with:
+          host: 194.9.172.249
+          port: 22
+          username: spookybot
+          key: ${{ SSH_KEY }}
+      - name: Deploy to live bot
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          echo "Tags: ${{ github.event.inputs.tags }}"
