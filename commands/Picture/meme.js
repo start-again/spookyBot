@@ -32,7 +32,6 @@ module.exports = {
     const randomIdx = Math.floor(Math.random() * imageSubmissions.length)
     const randSubmission = imageSubmissions[randomIdx]
 
-    console.log(imageSubmissions)
     if (randSubmission) message.channel.send(randSubmission.url)
     else message.channel.send(':ghost: No spooky meme found')
   },
