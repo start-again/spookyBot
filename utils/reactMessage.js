@@ -12,6 +12,11 @@ const translationNameContainsWord = (translationName, fullMessage) => {
   }
 }
 
+const translationNameContainsUser = (translationName, mentions) => {
+  // Search all mentions for trigger words, cast translationName to an array if not for compactness
+  return mentions.members.some(m => (typeof translationName === 'string' ? [translationName] : translationName).some(w => m.displayName.toLowerCase().contains(w)))
+}
+
 module.exports = async (guildId, message) => {
   const guildData = await getGuild(guildId)
   const translation = await require(`../lang/${guildData.lang}.js`)
@@ -19,5 +24,8 @@ module.exports = async (guildId, message) => {
 
   translation.words.forEach((w) => {
     if (translationNameContainsWord(w.name, fullMessage)) message.react(w.emoji)
+  })
+  translation.mentions.forEach(m => {
+    if (translationNameContainsUser(m.name, message.mentions)) message.react(m.emoji)
   })
 }

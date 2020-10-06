@@ -416,5 +416,11 @@ Based on the emoji uniqueName it should also be possible to search for it on the
       emoji: '🧟',
     }
   ],
+  mentions: [
+    {
+      name: 'spooky',
+      emoji: '👻'
+    }
+  ]
 }
 
