@@ -27,7 +27,7 @@ module.exports = {
         connection.voice.channel.leave()
       })
     } else {
-      message.reply('How can I scare your companions without you beeing present in the voice channel?')
+      message.author.send('How can I scare your companions without you beeing present in the voice channel?')
     }
   },
 }
