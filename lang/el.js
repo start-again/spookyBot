@@ -1,5 +1,5 @@
 module.exports = {
-  lang: 'gr',
+  lang: 'el',
   words: [
     {
       // Please do not delete this one 🙏
@@ -33,6 +33,6 @@ module.exports = {
     {
       name: 'Ιστός',
       emoji: '🕸',
-    }
+    },
   ],
 }

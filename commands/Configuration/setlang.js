@@ -6,6 +6,8 @@ const { resolve } = require('path')
 
 const { changeLang } = require('../../models/servers')
 
+const ISOCode = require('../../utils/languageCode')
+
 module.exports = {
   config: {
     command: 'setlang',
@@ -40,18 +42,22 @@ module.exports = {
       changeLang(message.guild.id, args[0])
     } else {
       // The language doesn't exist
-      let messageContent = ['The requested language does not exist, please choose a language from this list:']
-      availableLang.forEach((lang) => messageContent.push(`- **${lang}**`))
+      let messageContent = [
+        'The requested language does not exist, please choose a language from this list: (the bold part)',
+      ]
+      availableLang.forEach((lang) => messageContent.push(`- **${lang}**: ${ISOCode.find((l) => l.code == lang).name}`))
 
       const embed = new MessageEmbed()
         .setColor(colors.primary)
         .setDescription(messageContent)
-        .setFooter('This message will be deleted automatically')
+        .setFooter(
+          "If you can't find your language, don't hesitate to contact us by using the command boo!support | This message will be deleted automatically"
+        )
 
       message.channel.send(embed).then((m) => {
         setTimeout(() => {
           m.delete()
-        }, 10000)
+        }, 20000)
       })
     }
   },
