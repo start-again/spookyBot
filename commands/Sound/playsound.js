@@ -1,3 +1,4 @@
+const { MessageEmbed } = require('discord.js')
 const { prefix } = require('../../config.json')
 const { readdirSync } = require('fs')
 const { resolve } = require('path')
@@ -6,10 +7,10 @@ module.exports = {
   config: {
     name: 'Boo Sound',
     usage: `${prefix}booh`,
-    description: 'Display this menu',
+    description: 'Joins your voice channel and scares you',
     command: 'booh',
     aliases: ['buh', 'scare'],
-    displayHelp: false,
+    displayHelp: true,
   },
 
   run: async (bot, message, args) => {
@@ -27,7 +28,15 @@ module.exports = {
         connection.voice.channel.leave()
       })
     } else {
-      message.author.send('How can I scare your companions without you beeing present in the voice channel?')
+      const embed = new MessageEmbed()
+        .setTitle('How can I scare your companions without you beeing present in the voice channel?')
+        .setColor(colors.primary)
+
+      message.channel.send(embed).then((m) => {
+        setTimeout(() => {
+          m.delete()
+        }, 5000)
+      })
     }
   },
 }
