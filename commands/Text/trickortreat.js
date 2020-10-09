@@ -1,7 +1,7 @@
+const { MessageEmbed } = require('discord.js')
+const { prefix, colors } = require('../../config.json')
+
 const { treat, trick, createTrickOrTreat, getTrickOrTreat } = require('../../models/trickortreats')
-const { prefix } = require('../../config.json')
-const { readdirSync } = require('fs')
-const { resolve } = require('path')
 
 const isToday = (someDate) => {
   const today = new Date()
@@ -18,10 +18,10 @@ module.exports = {
   config: {
     name: 'Trick or Treat',
     usage: `${prefix}trickortreat`,
-    description: 'Gives you candy or scares you',
+    description: 'Gives you candy or scares you 😈',
     command: 'trickortreat',
-    aliases: [],
-    displayHelp: false,
+    aliases: ['tot'],
+    displayHelp: true,
   },
 
   run: async (bot, message, args) => {
@@ -36,20 +36,41 @@ module.exports = {
       if (Math.random() >= 0.5) {
         trickOrTreat = await trick(message.author.id)
 
-        message.reply(
-          `:smiling_imp: Oh no! You have been tricked! You now have ${trickOrTreat.treats} :candy: and ${trickOrTreat.tricks} :smiling_imp:. Better luck tomorrow!`
-        )
+        let embed = await new MessageEmbed()
+          .setTitle(':smiling_imp: Oh no!, You have been tricked!')
+          .setColor(colors.info)
+          .setDescription('Better luck tomorrow!')
+          .addField(':candy: Candys', trickOrTreat.treats, true)
+          .addField(':smiling_imp: Treats', trickOrTreat.tricks, true)
+          .setFooter(message.author.username, message.author.avatarURL({ dynamic: true }))
+          .setTimestamp(new Date())
+
+        await message.channel.send(embed)
       } else {
         trickOrTreat = await treat(message.author.id)
 
-        message.reply(
-          `:candy: Sweet, sweet candy! You now have ${trickOrTreat.treats} :candy: and ${trickOrTreat.tricks} :smiling_imp:. There will be more candy up for grabs  tomorrow!`
-        )
+        let embed = await new MessageEmbed()
+          .setTitle(':candy: Sweet, sweet candy!')
+          .setColor(colors.error)
+          .setDescription('There will be more candy up for grabs tomorrow!')
+          .addField(':candy: Candys', trickOrTreat.treats, true)
+          .addField(':smiling_imp: Treats', trickOrTreat.tricks, true)
+          .setFooter(message.author.username, message.author.avatarURL({ dynamic: true }))
+          .setTimestamp(new Date())
+
+        await message.channel.send(embed)
       }
     } else {
-      message.author.send(
-        `It looks like you have already played today. You now have ${trickOrTreat.treats} :candy: and ${trickOrTreat.tricks} :smiling_imp:. There will be more candy up for grabs  tomorrow!`
-      )
+      const embed = new MessageEmbed()
+        .setTitle('It looks like you have already played today.')
+        .setColor(colors.primary)
+        .setDescription('There will be more candy up for grabs tomorrow!')
+        .addField(':candy: Candys', trickOrTreat.tricks, true)
+        .addField(':smiling_imp: Treats', trickOrTreat.treats, true)
+        .setFooter(message.author.username, message.author.avatarURL({ dynamic: true }))
+        .setTimestamp(new Date())
+
+      message.channel.send(embed)
     }
   },
 }
