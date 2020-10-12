@@ -3,6 +3,24 @@ const { prefix, colors } = require('../config.json')
 
 const reactMessage = require('../utils/reactMessage')
 
+cmdQueue = []
+handlingCommand = false
+
+var waitToRunCommand = function() {
+  setTimeout(runCommand, 300) 
+}
+
+var runCommand = function() {
+  handlingCommand = true
+  const cmdFunc = cmdQueue.shift()
+  cmdFunc.cmd.run(cmdFunc.bot, cmdFunc.message, cmdFunc.args, done)
+}
+
+var done = function() {
+    handlingCommand = false
+    if (cmdQueue.length > 0) waitToRunCommand()
+}
+
 module.exports = async (bot, webhook, message) => {
   if (message.author.bot) return // Ignore all bots
   if (message.author.id === bot.user.id) return // Ignore bot itself
@@ -40,10 +58,13 @@ module.exports = async (bot, webhook, message) => {
       })
       return
     }
-    cmd.run(bot, message, args) // Run the command
+    // ----- Push to queue and wait for other jobs to finish -----
+    cmdQueue.push({cmd: cmd, bot: bot, message: message, args: args})
+    if (!handlingCommand) {
+      waitToRunCommand()
+    }
   } else {
     // -------------------- Reaction system --------------------
-    // console.log(reactMessage)
     reactMessage(message.guild.id, message)
   }
 }
