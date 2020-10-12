@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const { prefix, colors } = require('../../config.json')
+const { prefix, colors } = require('../../config/config.json')
 
 const { readdirSync } = require('fs')
 const { resolve } = require('path')

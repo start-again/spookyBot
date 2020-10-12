@@ -1,4 +1,4 @@
-const { prefix } = require('../config.json')
+const { prefix } = require('../config/config.json')
 
 let statusInterval = 0
 if (process.env.NODE_ENV === 'dev') {

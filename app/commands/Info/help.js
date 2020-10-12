@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js')
-const { prefix, colors } = require('../../config.json')
-const { version } = require('../../package.json')
+const { prefix, colors } = require('../../config/config.json')
+const { version } = require('../../../package.json')
 
 module.exports = {
   config: {

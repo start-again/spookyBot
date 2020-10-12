@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const { colors } = require('../config.json')
+const { colors } = require('../config/config.json')
 
 const { deleteGuild } = require('../models/servers')
 

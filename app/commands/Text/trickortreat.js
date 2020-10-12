@@ -1,7 +1,6 @@
 const { treat, trick, createTrickOrTreat, getTrickOrTreat } = require('../../models/trickortreats')
-const { prefix } = require('../../config.json')
-const { readdirSync } = require('fs')
-const { resolve } = require('path')
+const { prefix } = require('../../config/config.json')
+
 
 const isToday = (someDate) => {
   const today = new Date()
