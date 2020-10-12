@@ -1,4 +1,4 @@
-const { prefix } = require('../../config.json')
+const { prefix } = require('../../config/config.json')
 const { readdirSync } = require('fs')
 const { resolve } = require('path')
 

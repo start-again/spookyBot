@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  spooky-bot:
+    image: spookybot/spookybot:latest
+    build:
+      context: .
+      dockerfile: docker/spooky-node/DockerfileProd
+      args:
+        - NODE_VERSION=12.18.2
+    volumes:
+      - ./app:/spooky/app/:rw
+      - ./package.json:/spooky/package.json

@@ -1,0 +1,24 @@
+name: Deployment Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Tag'
+jobs:
+  deploy_prod_bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: appleboy/ssh-action@master
+        name: deploy to prod
+        with:
+          host: ${{ secrets.SSH_IP }}
+          port: ${{ secrets.SSH_PORT }}
+          username: spookybot
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            docker login -u ${{ secrets.DOCKER_USER  }} -p ${{ secrets.DOCKER_PASSWORD }}
+            docker pull spookybot/spookybot:latest
+            docker-compose -f /home/spookybot/docker-compose.yml down -v
+            docker-compose -f /home/spookybot/docker-compose.yml up -d
+            docker logout
+

@@ -1,6 +1,6 @@
 const { Client, Collection, WebhookClient } = require('discord.js')
 
-const { token, webhook } = require('./config.json')
+const { token, webhook } = require('./config/config.json')
 
 const bot = new Client()
 
