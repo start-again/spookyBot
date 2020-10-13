@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const { colors } = require('../connfig/config.json')
+const { colors } = require('../config/config.json')
 const { getGuild } = require('../models/servers')
 
 String.prototype.contains = function (toCheck) {
