@@ -15,13 +15,15 @@ jspm_packages/
 
 # Optional eslint cache
 .eslintcache
+.eslintrc.js
 
 # Yarn Integrity file
 .yarn-integrity
 
 # config file
-config.json
-
+app/config/config.json
 # IDE
 .idea
 *.iml
+
+

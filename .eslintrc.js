@@ -15,7 +15,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['lang/*.js'],
+      files: ['app/lang/*.js'],
       rules: {
         'require-jsdoc': 'off',
       },
