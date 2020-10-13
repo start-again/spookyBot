@@ -1,6 +1,6 @@
 {
   "name": "spookybot",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "A spooky Discord bot",
   "main": "app/core.js",
   "repository": "git@github.com:LucasCtrl/spookyBot.git",
