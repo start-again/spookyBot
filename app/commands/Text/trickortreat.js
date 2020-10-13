@@ -41,7 +41,7 @@ module.exports = {
           .setColor(colors.info)
           .setDescription('Better luck tomorrow!')
           .addField(':candy: Candys', trickOrTreat.treats, true)
-          .addField(':smiling_imp: Treats', trickOrTreat.tricks, true)
+          .addField(':smiling_imp: Tricks', trickOrTreat.tricks, true)
           .setFooter(message.author.username, message.author.avatarURL({ dynamic: true }))
           .setTimestamp(new Date())
 
@@ -54,7 +54,7 @@ module.exports = {
           .setColor(colors.error)
           .setDescription('There will be more candy up for grabs tomorrow!')
           .addField(':candy: Candys', trickOrTreat.treats, true)
-          .addField(':smiling_imp: Treats', trickOrTreat.tricks, true)
+          .addField(':smiling_imp: Tricks', trickOrTreat.tricks, true)
           .setFooter(message.author.username, message.author.avatarURL({ dynamic: true }))
           .setTimestamp(new Date())
 
@@ -65,8 +65,8 @@ module.exports = {
         .setTitle('It looks like you have already played today.')
         .setColor(colors.primary)
         .setDescription('There will be more candy up for grabs tomorrow!')
-        .addField(':candy: Candys', trickOrTreat.tricks, true)
-        .addField(':smiling_imp: Treats', trickOrTreat.treats, true)
+        .addField(':candy: Candys', trickOrTreat.treats, true)
+        .addField(':smiling_imp: Tricks', trickOrTreat.tricks, true)
         .setFooter(message.author.username, message.author.avatarURL({ dynamic: true }))
         .setTimestamp(new Date())
 
