@@ -73,7 +73,7 @@ module.exports = {
       emoji: '⚰',
     },
     {
-      name: ['crystral ball'],
+      name: ['crystal ball'],
       uniqueName: 'Crystal Ball',
       emoji: '🔮',
     },
