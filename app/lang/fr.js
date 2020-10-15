@@ -63,7 +63,7 @@ module.exports = {
       emoji: '🤡',
     },
     {
-      name: ['cerveuil'],
+      name: ['cerceuil'],
       uniqueName: 'Coffin',
       emoji: '⚰',
     },
