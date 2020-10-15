@@ -103,7 +103,7 @@ module.exports = {
       emoji: '🌕',
     },
     {
-      name: ['Urne'],
+      name: ['urne'],
       uniqueName: 'Funeral Urn',
       emoji: '⚱',
     },
