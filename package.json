@@ -1,8 +1,8 @@
 {
   "name": "spookybot",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "A spooky Discord bot",
-  "main": "core.js",
+  "main": "app/core.js",
   "repository": "git@github.com:LucasCtrl/spookyBot.git",
   "author": "LucasCtrl <lucasalt@protonmail.com>",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "prettier": "^2.1.2"
   },
   "scripts": {
-    "dev": "nodemon --inspect core.js",
-    "start": "node core.js"
+    "dev": "nodemon --inspect ./app/core.js",
+    "start": "node app/core.js"
   }
 }

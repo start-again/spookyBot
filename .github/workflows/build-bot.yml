@@ -1,0 +1,23 @@
+name: Build Workflow
+on:
+  push:
+    branches:
+        - main
+jobs:
+  job_one:
+    name: Build and push docker images
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build docker-image
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+          docker build -f ./docker/spooky-node/DockerfileProd --build-arg NODE_VERSION=12.18.2 -t spookybot/spookybot:latest -t spookybot/spookybot:${{github.run_number}} .
+          docker push spookybot/spookybot:${{github.run_number}}
+          docker push spookybot/spookybot:latest
+          docker logout
+
+
