@@ -15,11 +15,11 @@ module.exports = {
         emoji: '👻',
       },
       {
-        name: '万圣节',
+        name: ['万圣节'],
         emoji: '🎃',
       },
       {
-        name: '吸血鬼',
+        name: ['吸血鬼'],
         emoji: '🧛🏻‍♂️',
       },
       {
@@ -27,7 +27,7 @@ module.exports = {
         emoji: '🧙',
       },
       {
-        name: '僵尸',
+        name: ['僵尸'],
         emoji: '🧟',
       },
     ],

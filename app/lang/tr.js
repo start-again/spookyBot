@@ -3,7 +3,7 @@ module.exports = {
     words: [
       {
         // Please do not delete this one 🙏
-        name: 'ürpertici',
+        name: ['ürpertici'],
         emoji: '761602615326146590',
       },
       {
@@ -15,11 +15,11 @@ module.exports = {
         emoji: '👻',
       },
       {
-        name: 'cadılar bayramı',
+        name: ['cadılar bayramı'],
         emoji: '🎃',
       },
       {
-        name: 'vampir',
+        name: ['vampir'],
         emoji: '🧛🏻‍♂️',
       },
       {
