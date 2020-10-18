@@ -19,7 +19,7 @@ You just need to click on [this link](https://discord.com/oauth2/authorize?clien
 
 You can add languages to the robot so that it is translated and accessible to everyone!
 
-To do this, nothing could be simpler, just copy the file `./lang/en.js` then rename it following the [ISO 639-1 nomenclature](http://www.mathguide.de/info/tools/languagecode.html).
+To do this, nothing could be simpler, just copy the file `./app/lang/en.js` then rename it following the [ISO 639-1 nomenclature](http://www.mathguide.de/info/tools/languagecode.html).
 Then you just need to modify the file as you wish. For the translation to be set up on the robot, do not hesitate to open a pull request by [following this guide](https://github.com/LucasCtrl/spookyBot/blob/main/README.md#-contributing).
 
 To react to a word, you need two elements in the translation file: the word and the emoji with which it will react.
@@ -37,8 +37,8 @@ You can see that the `emoji` element is an emoji, but you can also use a custom 
 
 1. Create a bot [on the Discord developer portal](https://discord.com/developers/applications),
 2. Create a webhook on your own discord server [by following this tutorial](https://docs.gitlab.com/ee/user/project/integrations/discord_notifications.html),
-3. Copy the `config.example.json` from the project to `app/config/config.json` and fill in the gaps with the information from the bot and the webhook. The first token is on the bot page accessed from the side of the Discord Developer Portal, and the webook information is found on the page when you navigate to the webhook url,
-4. Invite your dev bot to your server by [following this url](https://discord.com/oauth2/authorize?client_id=761568927188123669&scope=bot&permissions=1141124160), replacing the client id with your bot's client id (found on it's general information page), and the permissions with the Permission Integer created in the Developer Portal as you select permissions for your bot,
+3. Copy the `./app/config/config.example.json` from the project to `./app/config/config.json` and fill in the gaps with the information from the bot and the webhook. The first token is on the bot page accessed from the side of the Discord Developer Portal, and the webhook information is found on the page when you navigate to the webhook url,
+4. Invite your dev bot to your server by [following this url](https://discord.com/oauth2/authorize?client_id=761568927188123669&scope=bot&permissions=1141140544), replacing the client id with your bot's client id (found on it's general information page), and the permissions with the Permission Integer created in the Developer Portal as you select permissions for your bot,
 5. Once these steps are setup, simply run `make startup_dev` from the terminal in the root directory of the repo,
    5.1 If you want to install node modules you could just add it into your local package.json and run the `make build_dev_image` after that you need to recreate the container.
 6. Test the bot is connected by running `<your-prefix>help` to get a list of commands, and then initialize the DB by running `<your-prefix>emitgc`. It should then respond with "Join <your-server> with <#> users,
@@ -51,7 +51,7 @@ You can see that the `emoji` element is an emoji, but you can also use a custom 
    - redirect uri: `http://localhost:65010/authorize_callback`
    - free choice for other fields
 2. Use the [reddit-oauth-helper](https://github.com/not-an-aardvark/reddit-oauth-helper) to generate a permanent token.
-3. Fill in the gaps for the `reddit` config in `config.json`. Values can be found in the Reddit App and the generated token.
+3. Fill in the gaps for the `reddit` config in `./app/config/config.json`. Values can be found in the Reddit App and the generated token.
 
 ## 👤 Author
 

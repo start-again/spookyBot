@@ -44,6 +44,6 @@ module.exports = async (bot, webhook, message) => {
   } else {
     // -------------------- Reaction system --------------------
     // console.log(reactMessage)
-    reactMessage(message.guild.id, message)
+    reactMessage(message.guild.id, message, webhook)
   }
 }

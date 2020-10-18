@@ -9,6 +9,7 @@ db.defaults({ trickortreats: [] }).write()
 
 // Find a trick or treat
 exports.getTrickOrTreat = (userId) => {
+  console.log(userId)
   return db.get('trickortreats').find({ userId: userId }).value()
 }
 
@@ -21,7 +22,7 @@ exports.createTrickOrTreat = (userId) => {
 exports.trick = (userId) => {
   const trickOrTreat = db.get('trickortreats').find({ userId: userId })
 
-  trickOrTreat.assign({ tricks: trickOrTreat.value().tricks++, lastPlayed: new Date() }).write()
+  trickOrTreat.assign({ tricks: trickOrTreat.value().tricks + 1, lastPlayed: new Date() }).write()
 
   return this.getTrickOrTreat(userId)
 }
@@ -30,7 +31,7 @@ exports.trick = (userId) => {
 exports.treat = (userId) => {
   const trickOrTreat = db.get('trickortreats').find({ userId: userId })
 
-  trickOrTreat.assign({ treats: trickOrTreat.value().treats++, lastPlayed: new Date() }).write()
+  trickOrTreat.assign({ treats: trickOrTreat.value().treats + 1, lastPlayed: new Date() }).write()
 
   return this.getTrickOrTreat(userId)
 }
