@@ -12,7 +12,7 @@ module.exports = (bot) => {
   }
 
 
-  const dirs = ['Info', 'Configuration', 'Sound', 'Picture', 'Text']]
+  const dirs = ['Info', 'Configuration', 'Sound', 'Picture', 'Text'];
 
   if (process.env.NODE_ENV === 'dev') dirs.push('Test')
 
