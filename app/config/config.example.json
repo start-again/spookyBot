@@ -10,5 +10,12 @@
     "success": "#2ECC71",
     "error": "#E74C3C",
     "info": "#7C5398"
+  },
+  "reddit": {
+    "userAgent": "SpookyBot, a Discord bot to celebrate Halloween",
+    "clientId": "",
+    "clientSecret": "",
+    "refreshToken": ""
   }
 }
+
