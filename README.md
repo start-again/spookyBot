@@ -29,7 +29,7 @@ To do this:
     * Or for just adding words in an existing language: `Added more words to language en (English)`.
 1. Save the spreadsheet file.
 1. Navigate to the sheet `HowTo` and generate the new or updated language files (*.js, e.g. “en.js“, “es.js“ or “fr.js“, …) in the directory of this spreadsheet file by clicking on the button `Create language files *.js` that calls a Basic macro which is generating the relevant JavaScript language files for the emojis.
-    * Hint: If the button is not clickable you probably need to change the mode in which LibreOffice is:
+    * *Hint:* If the button is not clickable you probably need to change the mode in which LibreOffice is:
         * In the menu bar click on “Extras“ →  “Formulars“ → “Draft mode“
 1. For the translation to be set up on the robot, do not hesitate to open a pull request by [following this guide](https://github.com/LucasCtrl/spookyBot/blob/main/README.md#-contributing).
 
