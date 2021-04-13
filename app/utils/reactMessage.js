@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js')
 const { colors } = require('../config/config.json')
-const { getGuild } = require('../models/servers')
+const { getGuild, createGuild } = require('../models/servers')
 
 String.prototype.contains = function (toCheck) {
   return this.indexOf(toCheck) >= 0
@@ -29,7 +29,12 @@ const translationNameContainsUser = (translationName, mentions) => {
 }
 
 module.exports = async (guildId, message, webhook) => {
-  const guildData = await getGuild(guildId)
+  let guildData = await getGuild(guildId)
+  if (guildData === undefined) {
+    await createGuild(guildId)
+    guildData = await getGuild(guildId)
+  }
+
   const translation = await require(`../lang/${guildData.lang}.js`)
   const fullMessage = message.content.toLowerCase()
 
