@@ -15,7 +15,7 @@ module.exports = {
       .setColor(colors.primary)
       .setAuthor('Invitation link', bot.user.avatarURL())
       .setDescription(
-        'You can click on the following link for adding the bot on your server: [https://discord.com/oauth2/authorize?client_id=761568927188123669&scope=bot&permissions=1141124160](https://discord.com/oauth2/authorize?client_id=761568927188123669&scope=bot&permissions=1141124160)'
+        'You can click on the following link for adding the bot on your server: [https://discord.com/oauth2/authorize?client_id=761568927188123669&scope=bot&permissions=1141140544](https://discord.com/oauth2/authorize?client_id=761568927188123669&scope=bot&permissions=1141124160)'
       )
 
     message.channel.send(embed)
