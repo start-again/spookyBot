@@ -3,35 +3,35 @@ module.exports = {
   words: [
     {
       // Please do not delete this one 🙏
-      name: 'spooky',
+      name: ['spooky'],
       emoji: '761602615326146590',
     },
     {
-      name: 'snoep',
+      name: ['snoep'],
       emoji: '🍬',
     },
     {
-      name: 'spook',
+      name: ['spook'],
       emoji: '👻',
     },
     {
-      name: 'halloween',
+      name: ['halloween'],
       emoji: '🎃',
     },
     {
-      name: 'vampier',
+      name: ['vampier'],
       emoji: '🧛🏻‍♂️',
     },
     {
-      name: 'tovenaar',
+      name: ['tovenaar'],
       emoji: '🧙',
     },
     {
-      name: 'zombie',
+      name: ['zombie'],
       emoji: '🧟',
     },
     {
-      name: 'ondode',
+      name: ['ondode'],
       emoji: '🧟',
     },
   ],

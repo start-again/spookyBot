@@ -3,31 +3,31 @@ module.exports = {
   words: [
     {
       // Please do not delete this one 🙏
-      name: 'spooky',
+      name: ['spooky'],
       emoji: '761602615326146590',
     },
     {
-      name: 'toffee',
+      name: ['toffee'],
       emoji: '🍬',
     },
     {
-      name: 'bhoot',
+      name: ['bhoot'],
       emoji: '👻',
     },
     {
-      name: 'darr',
+      name: ['darr'],
       emoji: '🎃',
     },
     {
-      name: 'makdi',
+      name: ['makdi'],
       emoji: '🕷',
     },
     {
-      name: 'aatma',
+      name: ['aatma'],
       emoji: '💀',
     },
     {
-      name: 'saanp',
+      name: ['saanp'],
       emoji: '🐍',
     },
   ],

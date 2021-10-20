@@ -18,17 +18,22 @@ You just need to click on [this link](https://discord.com/oauth2/authorize?clien
 
 You can add languages to the robot so that it is translated and accessible to everyone!
 
-To do this, nothing could be simpler, just copy the file `./app/lang/en.js` then rename it following the [ISO 639-1 nomenclature](http://www.mathguide.de/info/tools/languagecode.html).
-Then you just need to modify the file as you wish. For the translation to be set up on the robot, do not hesitate to open a pull request by [following this guide](https://github.com/LucasCtrl/spookyBot/blob/main/README.md#-contributing).
-
-To react to a word, you need two elements in the translation file: the word and the emoji with which it will react.
-
-```json
-{
-  "name": "halloween",
-  "emoji": "🎃"
-}
-```
+To do this:
+1. Open the file, e.g. with LibreOffice: `./app/lang/generated/all_translations_and_file_generator.ods`
+1. Navigate to the sheet `Emojis and all languages` and please enhance it with more words or the language or emoji that you want to add and stick to the format of other entries (do not use capital letters) with the single quotes and separating different word (combinations) with a comma, e.g.: 
+    * For a single trigger word: 'alien‘ 
+    * For a single trigger word which consists of two words: 'black cat‘ 
+    * Or for more than one word: 'alienmonster', 'monster' 
+1. Navigate to the sheet `Document history` and add a row in which you shortly in English describe the changes that you have made in the style of the former entries. E.g. 
+    * For a new languages: `Added words for language zh (Chinese).` 
+    * Or for just adding words in an existing language: `Added more words to language en (English)`.
+1. Save the spreadsheet file.
+1. Navigate to the sheet `HowTo` and generate the new or updated language files (*.js, e.g. “en.js“, “es.js“ or “fr.js“, …) in the directory of this spreadsheet file by clicking on the button `Create language files *.js` that calls a Basic macro which is generating the relevant JavaScript language files for the emojis.
+    * *Hint:* If the button is not clickable you probably need to change the mode in which LibreOffice is:
+        * In the menu bar click on “Extras“ →  “Formulars“ → “Draft mode“
+1. Move the newly generated *.js file, e.g. "it.js", into the parent folder `./app/lang/`
+1. Via git add the new *.js file, e.g. "it.js" in folder `./app/lang/` and also add the changes in the `./app/lang/generated/all_translations_and_file_generator.ods` file to your git feature branch and commit (+ push) it.
+1. For the translation to be set up on the robot, do not hesitate to open a pull request by [following this guide](https://github.com/LucasCtrl/spookyBot/blob/main/README.md#-contributing).
 
 You can see that the `emoji` element is an emoji, but you can also use a custom emoji. For that, I strongly advise you to [read this guide](https://discordjs.guide/popular-topics/reactions.html#custom-emojis).
 
