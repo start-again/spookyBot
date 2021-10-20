@@ -3,7 +3,7 @@ module.exports = {
     words: [
       {
         // Please do not delete this one 🙏
-        name: 'spooky',
+        name: ['spooky'],
         emoji: '761602615326146590',
       },
       {
@@ -27,7 +27,7 @@ module.exports = {
         emoji: '🧙',
       },
       {
-        name: 'zumbi',
+        name: ['zumbi'],
         emoji: '🧟',
       },
       {
